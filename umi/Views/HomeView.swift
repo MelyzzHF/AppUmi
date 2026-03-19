@@ -9,10 +9,17 @@ import SwiftUI
 
 // MARK: - Tipos de Juego
 enum GameType: String, CaseIterable, Identifiable {
+    // Juegos de Lenguaje (Originales)
     case syllables = "Sílabas"
     case vowels = "Vocales"
     case consonants = "Consonantes"
     case classify = "Clasificar"
+    
+    // Juegos Básicos (Integrados)
+    case colors = "Colores"
+    case numbers = "Números"
+    case letters = "Letras"
+    case shapes = "Formas"
     
     var id: String { self.rawValue }
     
@@ -22,6 +29,10 @@ enum GameType: String, CaseIterable, Identifiable {
         case .vowels: return "🔴"
         case .consonants: return "🔵"
         case .classify: return "🎯"
+        case .colors: return "🎨"
+        case .numbers: return "🔢"
+        case .letters: return "🔤"
+        case .shapes: return "⭐"
         }
     }
     
@@ -31,6 +42,10 @@ enum GameType: String, CaseIterable, Identifiable {
         case .vowels: return "Encuentra las vocales"
         case .consonants: return "Encuentra las consonantes"
         case .classify: return "Separa vocales y consonantes"
+        case .colors: return "Aprende los colores"
+        case .numbers: return "Aprende a contar"
+        case .letters: return "Encuentra la letra"
+        case .shapes: return "Identifica las formas"
         }
     }
     
@@ -40,6 +55,10 @@ enum GameType: String, CaseIterable, Identifiable {
         case .vowels: return "Juego de vocales. Encuentra las letras A, E, I, O, U."
         case .consonants: return "Juego de consonantes. Encuentra las letras que no son vocales."
         case .classify: return "Juego de clasificar. Separa las letras en vocales y consonantes."
+        case .colors: return "Juego de colores. Aprende a identificar los diferentes colores."
+        case .numbers: return "Juego de números. Aprende a contar y reconocer números."
+        case .letters: return "Juego de letras. Encuentra la letra correcta del abecedario."
+        case .shapes: return "Juego de formas. Identifica figuras geométricas."
         }
     }
 }
