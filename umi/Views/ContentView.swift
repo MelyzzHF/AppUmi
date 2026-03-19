@@ -35,6 +35,7 @@ struct ContentView: View {
     @ViewBuilder
     private func gameView(for game: GameType) -> some View {
         switch game {
+        // MARK: - Juegos Originales
         case .syllables:
             SyllablesGameView(isPresented: Binding(
                 get: { selectedGame == .syllables },
@@ -56,6 +57,31 @@ struct ContentView: View {
         case .classify:
             ClassifyGameView(isPresented: Binding(
                 get: { selectedGame == .classify },
+                set: { if !$0 { selectedGame = nil } }
+            ))
+            
+        // MARK: - Juegos Integrados
+        case .colors:
+            ColorsGameView(isPresented: Binding(
+                get: { selectedGame == .colors },
+                set: { if !$0 { selectedGame = nil } }
+            ))
+            
+        case .numbers:
+            NumbersGameView(isPresented: Binding(
+                get: { selectedGame == .numbers },
+                set: { if !$0 { selectedGame = nil } }
+            ))
+            
+        case .letters:
+            LettersGameView(isPresented: Binding(
+                get: { selectedGame == .letters },
+                set: { if !$0 { selectedGame = nil } }
+            ))
+            
+        case .shapes:
+            ShapesGameView(isPresented: Binding(
+                get: { selectedGame == .shapes },
                 set: { if !$0 { selectedGame = nil } }
             ))
         }
