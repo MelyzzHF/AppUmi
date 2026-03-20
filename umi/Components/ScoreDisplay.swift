@@ -1,4 +1,3 @@
-
 //
 //  ScoreDisplay.swift
 //  UmiApp
@@ -57,7 +56,7 @@ struct ScoreBadge: View {
                 .foregroundColor(colorManager.palette.textColor)
         }
         .padding(.horizontal, 16)
-        .padding(.vertical: 10)
+        .padding(.vertical, 10)
         .background(colorManager.palette.accent)
         .cornerRadius(15)
         .scaleEffect(isAnimating ? 1.1 : 1.0)
